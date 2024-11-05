@@ -648,9 +648,9 @@ function OrionLib:MakeWindow(WindowConfig)
 			Time = 5
 		})
 
-	local Sound = Instance.new("Sound", workspace)
-      Sound.SoundId = "rbxassetid://4590662766"
-      Sound:Play()
+        local Sound = Instance.new("Sound", workspace)
+              Sound.SoundId = "rbxassetid://4590662766"
+              Sound:Play()
 
 		WindowConfig.CloseCallback()
 	end)
