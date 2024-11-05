@@ -389,7 +389,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 	spawn(function()
 		NotificationConfig.Name = NotificationConfig.Name or "Notification"
 		NotificationConfig.Content = NotificationConfig.Content or "Test"
-		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://14250466898"
+		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://4384403532"
 		NotificationConfig.Time = NotificationConfig.Time or 15
 
 		local NotificationParent = SetProps(MakeElement("TFrame"), {
@@ -647,6 +647,11 @@ function OrionLib:MakeWindow(WindowConfig)
 			Content = "点击右Shift重新打开界面",
 			Time = 5
 		})
+
+	local Sound = Instance.new("Sound", workspace)
+          Sound.SoundId = "rbxassetid://4590662766"
+          Sound:Play()
+
 		WindowConfig.CloseCallback()
 	end)
 
