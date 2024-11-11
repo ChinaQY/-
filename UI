@@ -41,7 +41,7 @@ local function GetIcon(IconName)
 	else
 		return nil
 	end
-end   
+end
 
 local Orion = Instance.new("ScreenGui")
 Orion.Name = "Orion"
@@ -123,7 +123,7 @@ local function MakeDraggable(DragPoint, Main)
 			end
 		end)
 	end)
-end    
+end
 
 local function Create(Name, Properties, Children)
 	local Object = Instance.new(Name)
@@ -179,32 +179,32 @@ local function ReturnProperty(Object)
 	end
 	if Object:IsA("TextLabel") or Object:IsA("TextBox") then
 		return "TextColor3"
-	end   
+	end
 	if Object:IsA("ImageLabel") or Object:IsA("ImageButton") then
 		return "ImageColor3"
-	end   
+	end
 end
 
 local function AddThemeObject(Object, Type)
 	if not OrionLib.ThemeObjects[Type] then
 		OrionLib.ThemeObjects[Type] = {}
-	end    
+	end
 	table.insert(OrionLib.ThemeObjects[Type], Object)
 	Object[ReturnProperty(Object)] = OrionLib.Themes[OrionLib.SelectedTheme][Type]
 	return Object
-end    
+end
 
 local function SetTheme()
 	for Name, Type in pairs(OrionLib.ThemeObjects) do
 		for _, Object in pairs(Type) do
 			Object[ReturnProperty(Object)] = OrionLib.Themes[OrionLib.SelectedTheme][Name]
-		end    
-	end    
+		end
+	end
 end
 
 local function PackColor(Color)
 	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
-end    
+end
 
 local function UnpackColor(Color)
 	return Color3.fromRGB(Color.R, Color.G, Color.B)
@@ -219,7 +219,7 @@ local function LoadCfg(Config)
 					OrionLib.Flags[a]:Set(UnpackColor(b))
 				else
 					OrionLib.Flags[a]:Set(b)
-				end    
+				end
 			end)
 		else
 			warn("Orion Library Config Loader - Could not find ", a ,b)
@@ -399,7 +399,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 		})
 
 		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 10), {
-			Parent = NotificationParent, 
+			Parent = NotificationParent,
 			Size = UDim2.new(1, 0, 0, 0),
 			Position = UDim2.new(1, -55, 0, 0),
 			BackgroundTransparency = 0,
@@ -444,7 +444,7 @@ function OrionLib:MakeNotification(NotificationConfig)
 		wait(1.35)
 		NotificationFrame:Destroy()
 	end)
-end    
+end
 
 function OrionLib:Init()
 	if OrionLib.SaveCfg then	
@@ -533,15 +533,15 @@ function OrionLib:MakeWindow(WindowConfig)
 		AddThemeObject(SetProps(MakeElement("Frame"), {
 			Size = UDim2.new(1, 0, 0, 10),
 			Position = UDim2.new(0, 0, 0, 0)
-		}), "Second"), 
+		}), "Second"),
 		AddThemeObject(SetProps(MakeElement("Frame"), {
 			Size = UDim2.new(0, 10, 1, 0),
 			Position = UDim2.new(1, -10, 0, 0)
-		}), "Second"), 
+		}), "Second"),
 		AddThemeObject(SetProps(MakeElement("Frame"), {
 			Size = UDim2.new(0, 1, 1, 0),
 			Position = UDim2.new(1, -1, 0, 0)
-		}), "Stroke"), 
+		}), "Stroke"),
 		TabHolder,
 		SetChildren(SetProps(MakeElement("TFrame"), {
 			Size = UDim2.new(1, 0, 0, 50),
@@ -549,7 +549,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		}), {
 			AddThemeObject(SetProps(MakeElement("Frame"), {
 				Size = UDim2.new(1, 0, 0, 1)
-			}), "Stroke"), 
+			}), "Stroke"),
 			AddThemeObject(SetChildren(SetProps(MakeElement("Frame"), {
 				AnchorPoint = Vector2.new(0, 0.5),
 				Size = UDim2.new(0, 32, 0, 32),
@@ -619,10 +619,10 @@ function OrionLib:MakeWindow(WindowConfig)
 				AddThemeObject(SetProps(MakeElement("Frame"), {
 					Size = UDim2.new(0, 1, 1, 0),
 					Position = UDim2.new(0.5, 0, 0, 0)
-				}), "Stroke"), 
+				}), "Stroke"),
 				CloseBtn,
 				MinimizeBtn
-			}), "Second"), 
+			}), "Second"),
 		}),
 		DragPoint,
 		WindowStuff
@@ -648,8 +648,10 @@ function OrionLib:MakeWindow(WindowConfig)
 			Time = 5
 		})
 
-        local Sound = Instance.new("Sound", workspace)
+        local Sound = Instance.new("Sound")
               Sound.SoundId = "rbxassetid://4590662766"
+              Sound.Parent = game.Workspace
+              Sound.Volume = 5
               Sound:Play()
 
 		WindowConfig.CloseCallback()
@@ -678,7 +680,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			wait(0.1)
 			WindowStuff.Visible = false	
 		end
-		Minimized = not Minimized    
+		Minimized = not Minimized
 	end)
 
 	local function LoadSequence()
@@ -770,7 +772,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			TabFrame.Title.TextTransparency = 0
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true
-		end    
+		end
 
 		AddConnection(TabFrame.MouseButton1Click, function()
 			for _, Tab in next, TabHolder:GetChildren() do
@@ -778,17 +780,17 @@ function OrionLib:MakeWindow(WindowConfig)
 					Tab.Title.Font = Enum.Font.GothamSemibold
 					TweenService:Create(Tab.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4}):Play()
 					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0.4}):Play()
-				end    
+				end
 			end
 			for _, ItemContainer in next, MainWindow:GetChildren() do
 				if ItemContainer.Name == "ItemContainer" then
 					ItemContainer.Visible = false
-				end    
-			end  
+				end
+			end
 			TweenService:Create(TabFrame.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
 			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 			TabFrame.Title.Font = Enum.Font.GothamBlack
-			Container.Visible = true   
+			Container.Visible = true
 		end)
 
 		local function GetElements(ItemParent)
@@ -851,7 +853,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					ParagraphFrame.Content.Text = ToChange
 				end
 				return ParagraphFunction
-			end    
+			end
 			function ElementFunction:AddButton(ButtonConfig)
 				ButtonConfig = ButtonConfig or {}
 				ButtonConfig.Name = ButtonConfig.Name or "Button"
@@ -906,7 +908,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				end	
 
 				return Button
-			end    
+			end
 			function ElementFunction:AddToggle(ToggleConfig)
 				ToggleConfig = ToggleConfig or {}
 				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
@@ -962,7 +964,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					TweenService:Create(ToggleBox.Stroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Toggle.Value and ToggleConfig.Color or OrionLib.Themes.Default.Stroke}):Play()
 					TweenService:Create(ToggleBox.Ico, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 0 or 1, Size = Toggle.Value and UDim2.new(0, 20, 0, 20) or UDim2.new(0, 8, 0, 8)}):Play()
 					ToggleConfig.Callback(Toggle.Value)
-				end    
+				end
 
 				Toggle:Set(Toggle.Value)
 
@@ -988,7 +990,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					OrionLib.Flags[ToggleConfig.Flag] = Toggle
 				end	
 				return Toggle
-			end  
+			end
 			function ElementFunction:AddSlider(SliderConfig)
 				SliderConfig = SliderConfig or {}
 				SliderConfig.Name = SliderConfig.Name or "Slider"
@@ -1053,12 +1055,12 @@ function OrionLib:MakeWindow(WindowConfig)
 
 				SliderBar.InputBegan:Connect(function(Input)
 					if Input.UserInputType == Enum.UserInputType.MouseButton1 then
-						Dragging = true 
+						Dragging = true
 					end
 				end)
 				SliderBar.InputEnded:Connect(function(Input)
 					if Input.UserInputType == Enum.UserInputType.MouseButton1 then
-						Dragging = false 
+						Dragging = false
 					end
 				end)
 
@@ -1076,14 +1078,14 @@ function OrionLib:MakeWindow(WindowConfig)
 					SliderBar.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
 					SliderDrag.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
 					SliderConfig.Callback(self.Value)
-				end      
+				end
 
 				Slider:Set(Slider.Value)
 				if SliderConfig.Flag then				
 					OrionLib.Flags[SliderConfig.Flag] = Slider
 				end
 				return Slider
-			end  
+			end
 			function ElementFunction:AddDropdown(DropdownConfig)
 				DropdownConfig = DropdownConfig or {}
 				DropdownConfig.Name = DropdownConfig.Name or "Dropdown"
@@ -1146,7 +1148,7 @@ function OrionLib:MakeWindow(WindowConfig)
 							Position = UDim2.new(0, 0, 1, -1),
 							Name = "Line",
 							Visible = false
-						}), "Stroke"), 
+						}), "Stroke"),
 						Click
 					}), {
 						Size = UDim2.new(1, 0, 0, 38),
@@ -1159,7 +1161,7 @@ function OrionLib:MakeWindow(WindowConfig)
 
 				AddConnection(DropdownList:GetPropertyChangedSignal("AbsoluteContentSize"), function()
 					DropdownContainer.CanvasSize = UDim2.new(0, 0, 0, DropdownList.AbsoluteContentSize.Y)
-				end)  
+				end)
 
 				local function AddOptions(Options)
 					for _, Option in pairs(Options) do
@@ -1190,13 +1192,13 @@ function OrionLib:MakeWindow(WindowConfig)
 					if Delete then
 						for _,v in pairs(Dropdown.Buttons) do
 							v:Destroy()
-						end    
+						end
 						table.clear(Dropdown.Options)
 						table.clear(Dropdown.Buttons)
 					end
 					Dropdown.Options = Options
 					AddOptions(Dropdown.Options)
-				end  
+				end
 
 				function Dropdown:Set(Value)
 					if not table.find(Dropdown.Options, Value) then
@@ -1359,7 +1361,7 @@ function OrionLib:MakeWindow(WindowConfig)
 					OrionLib.Flags[BindConfig.Flag] = Bind
 				end
 				return Bind
-			end  
+			end
 			function ElementFunction:AddTextbox(TextboxConfig)
 				TextboxConfig = TextboxConfig or {}
 				TextboxConfig.Name = TextboxConfig.Name or "Textbox"
@@ -1532,7 +1534,7 @@ function OrionLib:MakeWindow(WindowConfig)
 							Position = UDim2.new(0, 0, 1, -1),
 							Name = "Line",
 							Visible = false
-						}), "Stroke"), 
+						}), "Stroke"),
 					}), {
 						Size = UDim2.new(1, 0, 0, 38),
 						ClipsDescendants = true,
@@ -1622,8 +1624,8 @@ function OrionLib:MakeWindow(WindowConfig)
 					OrionLib.Flags[ColorpickerConfig.Flag] = Colorpicker
 				end
 				return Colorpicker
-			end  
-			return ElementFunction   
+			end
+			return ElementFunction
 		end	
 
 		local ElementFunction = {}
@@ -1657,19 +1659,20 @@ function OrionLib:MakeWindow(WindowConfig)
 
 			local SectionFunction = {}
 			for i, v in next, GetElements(SectionFrame.Holder) do
-				SectionFunction[i] = v 
+				SectionFunction[i] = v
 			end
 			return SectionFunction
 		end	
 
 		for i, v in next, GetElements(Container) do
-			ElementFunction[i] = v 
+			ElementFunction[i] = v
 		end
 
 		if TabConfig.PremiumOnly then
 			for i, v in next, ElementFunction do
-				ElementFunction[i] = function() end
-			end    
+				ElementFunction[i] = function()
+				end
+			end
 			Container:FindFirstChild("UIListLayout"):Destroy()
 			Container:FindFirstChild("UIPadding"):Destroy()
 			SetChildren(SetProps(MakeElement("TFrame"), {
@@ -1703,11 +1706,11 @@ function OrionLib:MakeWindow(WindowConfig)
 				}), "Text")
 			})
 		end
-		return ElementFunction   
-	end  
+		return ElementFunction
+	end
 	
 	return TabFunction
-end   
+end
 
 function OrionLib:Destroy()
 	Orion:Destroy()
