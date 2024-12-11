@@ -2413,6 +2413,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
+      Name = "格蕾丝",
+      Icon = "rbxassetid://14250466898",
+      PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "情云格蕾丝",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Grace"))()
+end})
+
+local Tab = Window:MakeTab({
       Name = "俄亥俄州",
       Icon = "rbxassetid://14250466898",
       PremiumOnly = false
