@@ -22,6 +22,7 @@ local Tab = Window:MakeTab({
 Tab:AddParagraph("作者","情云")
 Tab:AddLabel("此脚本为缝合")
 Tab:AddLabel("此脚本完全免费禁止倒卖")
+Tab:AddLabel("QQ群 : 834856433")
 
 local Tab = Window:MakeTab({
       Name = "通用功能",
