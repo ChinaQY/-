@@ -1391,7 +1391,7 @@ end})
 Tab:AddButton({
     Name = "国服马可",
     Callback = function()
-loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+loadstring(game:HttpGet("https://pastebin.com/raw/r97d7dS0"))()
 end})
 
 Tab:AddToggle({
@@ -1449,7 +1449,7 @@ end})
 Tab:AddButton({
     Name = "电脑键盘",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"))()
 end})
 
 Tab:AddButton({
@@ -1517,7 +1517,7 @@ end})
 Tab:AddButton({
     Name = "传送玩家",
     Callback = function()
-loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+loadstring(game:HttpGet("https://pastebin.com/raw/YNVbeqPy"))()
 end})
 
 Tab:AddButton({
@@ -2094,7 +2094,7 @@ end})
 Tab:AddButton({
     Name = "MS HUB",
     Callback = function()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"),true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"))()
 end})
 
 Tab:AddButton({
