@@ -283,6 +283,18 @@ loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,1
 end})
 
 Tab:AddButton({
+    Name = "撸管",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-Off-V2-25567"))()
+end})
+
+Tab:AddButton({
+    Name = "自瞄",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+end})
+
+Tab:AddButton({
     Name = "情云自瞄(其实就是阿尔宙斯自瞄)",
     Callback = function()
 local Script_Title = "情云 <font color=\"rgb(255, 0, 0)\">|</font> 自瞄"
@@ -2307,6 +2319,12 @@ while true do
 end
 end})
 
+Tab:AddButton({
+    Name = "生成Rush",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/DOORS-Custom-Entity-S*er-V2-21705"))()
+end})
+
 local Tab = Window:MakeTab({
       Name = "DOORS物品",
       Icon = "rbxassetid://14250466898",
@@ -2366,18 +2384,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
-      Name = "DOORS : Rooms+",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
-})
-
-Tab:AddButton({
-    Name = "DOORS : Rooms+",
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Rooms"))()
-end})
-
-local Tab = Window:MakeTab({
       Name = "RFF",
       Icon = "rbxassetid://14250466898",
       PremiumOnly = false
@@ -2430,6 +2436,12 @@ local Tab = Window:MakeTab({
       Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
+
+Tab:AddButton({
+    Name = "自瞄",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+end})
 
 Tab:AddButton({
     Name = "情云自瞄(其实就是阿尔宙斯自瞄)",
@@ -3551,6 +3563,30 @@ Tab:AddButton({
     Name = "情云复活版",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/GB"))()
+end})
+
+local Tab = Window:MakeTab({
+      Name = "最强战场",
+      Icon = "rbxassetid://14250466898",
+      PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "自瞄",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+end})
+
+Tab:AddButton({
+    Name = "动作集 ( 别人可以看见 )",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mautiku/ehh/main/strong%20guest.lua.txt"))()
+end})
+
+Tab:AddButton({
+    Name = "卡UI了无法滑动 ? 点我",
+    Callback = function()
+game:GetService("CoreGui")["Discord"]:Destroy()
 end})
 
 local Tab = Window:MakeTab({
