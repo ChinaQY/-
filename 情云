@@ -291,7 +291,19 @@ end})
 Tab:AddButton({
     Name = "自瞄",
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+getgenv().Camlock_Settings = {
+        Prediction = 0.146,
+        AimPart = "HumanoidRootPart",
+        AutoPrediction = false,
+        Notification = true,
+        Button = true,
+        AntiGroundShots = false,
+        UnderGroundResolver = false,
+        Version = "2.5.1",
+        Credits = "space_0999",
+        DiscordServer = "discord.gg/SKhamGzTdn"
+    }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
 Tab:AddButton({
@@ -2440,7 +2452,19 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "自瞄",
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+getgenv().Camlock_Settings = {
+        Prediction = 0.146,
+        AimPart = "HumanoidRootPart",
+        AutoPrediction = false,
+        Notification = true,
+        Button = true,
+        AntiGroundShots = false,
+        UnderGroundResolver = false,
+        Version = "2.5.1",
+        Credits = "space_0999",
+        DiscordServer = "discord.gg/SKhamGzTdn"
+    }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
 Tab:AddButton({
@@ -3574,7 +3598,19 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "自瞄",
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+getgenv().Camlock_Settings = {
+        Prediction = 0.146,
+        AimPart = "HumanoidRootPart",
+        AutoPrediction = false,
+        Notification = true,
+        Button = true,
+        AntiGroundShots = false,
+        UnderGroundResolver = false,
+        Version = "2.5.1",
+        Credits = "space_0999",
+        DiscordServer = "discord.gg/SKhamGzTdn"
+    }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
 Tab:AddButton({
@@ -3604,7 +3640,19 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "自瞄",
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+getgenv().Camlock_Settings = {
+        Prediction = 0.146,
+        AimPart = "HumanoidRootPart",
+        AutoPrediction = false,
+        Notification = true,
+        Button = true,
+        AntiGroundShots = false,
+        UnderGroundResolver = false,
+        Version = "2.5.1",
+        Credits = "space_0999",
+        DiscordServer = "discord.gg/SKhamGzTdn"
+    }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
 Tab:AddButton({
