@@ -292,16 +292,17 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "Head",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "Head",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -309,16 +310,17 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "HumanoidRootPart",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "HumanoidRootPart",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -2469,16 +2471,17 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "Head",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "Head",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -2486,16 +2489,17 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "HumanoidRootPart",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "HumanoidRootPart",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -3631,16 +3635,17 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "Head",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "Head",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -3648,16 +3653,17 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "HumanoidRootPart",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "HumanoidRootPart",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -3689,16 +3695,17 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "Head",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "Head",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
@@ -3706,16 +3713,17 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-        Prediction = 0.146,
-        AimPart = "HumanoidRootPart",
-        AutoPrediction = false,
-        Notification = true,
-        Button = true,
-        AntiGroundShots = false,
-        UnderGroundResolver = false,
-        Version = "2.5.1",
-        Credits = "space_0999"
-    }
+    Prediction = 0.146,
+    AimPart = "HumanoidRootPart",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
 end})
 
