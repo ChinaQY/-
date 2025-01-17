@@ -3566,6 +3566,36 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
+      Name = "犯罪",
+      Icon = "rbxassetid://17140853847",
+      PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "自瞄",
+    Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))()
+end})
+
+Tab:AddButton({
+    Name = "Criminology",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/temp-criminology/main/criminology.lua"))()
+end})
+
+Tab:AddButton({
+    Name = "Criminology Light",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/crimlight/main/criminologylight.lua"))()
+end})
+
+Tab:AddButton({
+    Name = "不知名犯罪脚本",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vuubvyc/UNDETECTEDWAREEE/main/Script"))()
+end})
+
+local Tab = Window:MakeTab({
       Name = "最强战场",
       Icon = "rbxassetid://17140853847",
       PremiumOnly = false
