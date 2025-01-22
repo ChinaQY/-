@@ -3668,6 +3668,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/ma
 end})
 
 Tab:AddButton({
+    Name = "绕过Criminology踢出检测",
+    Callback = function()
+for _, Value in next, getgc(true) do
+    if typeof(Value) == "table" then
+        if rawget(Value, "indexInstance") or rawget(Value, "newindexInstance") or rawget(Value, "newIndexInstance") then
+            Value.tvk = {"kick", function() return task.wait(9e9) end}
+        end
+    end
+end
+end})
+
+Tab:AddButton({
     Name = "Criminology",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/temp-criminology/main/criminology.lua"))()
@@ -3677,6 +3689,12 @@ Tab:AddButton({
     Name = "Criminology Light",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/crimlight/main/criminologylight.lua"))()
+end})
+
+Tab:AddButton({
+    Name = "复制Criminology卡密获取链接",
+    Callback = function()
+setclipboard("https://linkvertise.com/1193953/free-criminality-gui")
 end})
 
 Tab:AddButton({
