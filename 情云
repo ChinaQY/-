@@ -3698,6 +3698,12 @@ setclipboard("https://linkvertise.com/1193953/free-criminality-gui")
 end})
 
 Tab:AddButton({
+    Name = "qwertyu4t55567rgdf的犯罪脚本",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/qwertyu4t55567rgdf/fling/main/Loader.lua"))()
+end})
+
+Tab:AddButton({
     Name = "不知名犯罪脚本",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vuubvyc/UNDETECTEDWAREEE/main/Script"))()
