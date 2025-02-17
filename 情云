@@ -7,7 +7,7 @@ OrionLib:MakeNotification({
 
 local Sound = Instance.new("Sound")
       Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game.Workspace
+      Sound.Parent = game:GetService("SoundService")
       Sound.Volume = 5
       Sound:Play()
 
@@ -2159,7 +2159,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     
 local Sound = Instance.new("Sound")
       Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game.Workspace
+      Sound.Parent = game:GetService("SoundService")
       Sound.Volume = 5
       Sound:Play()
     
@@ -2175,7 +2175,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 
 local Sound = Instance.new("Sound")
       Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game.Workspace
+      Sound.Parent = game:GetService("SoundService")
       Sound.Volume = 5
       Sound:Play()
 
@@ -2267,7 +2267,7 @@ LatestRoom:GetPropertyChangedSignal("Value"):Connect(function()
 
     local Sound = Instance.new("Sound")
           Sound.SoundId = "rbxassetid://4590662766"
-          Sound.Parent = game.Workspace
+          Sound.Parent = game:GetService("SoundService")
           Sound.Volume = 5
           Sound:Play()
 
