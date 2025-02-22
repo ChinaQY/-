@@ -49,6 +49,24 @@ getgenv().gg_scripters = "g5s"
 end})
 
 Tab:AddButton({
+    Name = "恢复比例",
+    Callback = function()
+getgenv().Resolution = {
+    [".gg/scripters"] = 1
+}
+
+local Camera = workspace.CurrentCamera
+if getgenv().gg_scripters == nil then
+    game:GetService("RunService").RenderStepped:Connect(
+        function()
+            Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution[".gg/scripters"], 0, 0, 0, 1)
+        end
+    )
+end
+getgenv().gg_scripters = "g5s"
+end})
+
+Tab:AddButton({
     Name = "锁定人物视角",
     Callback = function()
 local ShiftlockStarterGui = Instance.new("ScreenGui")
