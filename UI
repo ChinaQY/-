@@ -650,7 +650,7 @@ function OrionLib:MakeWindow(WindowConfig)
 
         local Sound = Instance.new("Sound")
               Sound.SoundId = "rbxassetid://4590662766"
-              Sound.Parent = game.Sound
+              Sound.Parent = game:GetService("SoundService")
               Sound.Volume = 5
               Sound:Play()
 
