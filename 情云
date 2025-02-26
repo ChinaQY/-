@@ -31,6 +31,12 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
+    Name = "IYDex修复版",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Dex.luau"))()
+end})
+
+Tab:AddButton({
     Name = "普京比例",
     Callback = function()
 getgenv().Resolution = {
@@ -838,7 +844,7 @@ local function addComboBox(text, options, funct, ...)
         setBoxState()
     end)
 
-    newCombo:WaitForChild("Name").Text = text .. ": " .. (#options > 0 and options[1] or "")
+    newCombo:WaitForChild("Name").Text = text..": "..(#options > 0 and options[1] or "")
     newCombo.Size = UDim2.new(0.95, 0, 0, element_height)
     newCombo.Name = #options > 0 and options[1] or ""
     newCombo.Parent = Menu
@@ -854,7 +860,7 @@ local function addComboBox(text, options, funct, ...)
         table.insert(elems, newElem)
 
         newElem.MouseButton1Click:Connect(function()
-            newCombo:WaitForChild("Name").Text = text .. ": " .. name
+            newCombo:WaitForChild("Name").Text = text..": "..name
             enabled = false
             setBoxState()
 
@@ -1466,6 +1472,12 @@ Tab:AddButton({
 game:GetService("UserInputService").JumpRequest:connect(function()
 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
       end)
+end})
+
+Tab:AddButton({
+    Name = "防甩飞",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/AntiFling.lua"))()
 end})
 
 Tab:AddButton({
@@ -3019,7 +3031,7 @@ local function addComboBox(text, options, funct, ...)
         setBoxState()
     end)
 
-    newCombo:WaitForChild("Name").Text = text .. ": " .. (#options > 0 and options[1] or "")
+    newCombo:WaitForChild("Name").Text = text..": "..(#options > 0 and options[1] or "")
     newCombo.Size = UDim2.new(0.95, 0, 0, element_height)
     newCombo.Name = #options > 0 and options[1] or ""
     newCombo.Parent = Menu
@@ -3035,7 +3047,7 @@ local function addComboBox(text, options, funct, ...)
         table.insert(elems, newElem)
 
         newElem.MouseButton1Click:Connect(function()
-            newCombo:WaitForChild("Name").Text = text .. ": " .. name
+            newCombo:WaitForChild("Name").Text = text..": "..name
             enabled = false
             setBoxState()
 
