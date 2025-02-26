@@ -86,7 +86,7 @@ ImageButton.Size = UDim2.new(0.0636147112, 0, 0.0661305636, 0)
 ImageButton.SizeConstraint = Enum.SizeConstraint.RelativeXX
 ImageButton.Image = "http://www.roblox.com/asset/?id=182223762"
 local function TLQOYN_fake_script()
-    local script = Instance.new('LocalScript', ImageButton)
+    local script = Instance.new("LocalScript", ImageButton)
 
     local MobileCameraFramework = {}
     local players = game:GetService("Players")
@@ -179,7 +179,7 @@ end
 end
 coroutine.wrap(TLQOYN_fake_script)()
 local function OMQRQRC_fake_script()
-    local script = Instance.new('LocalScript', ShiftlockStarterGui)
+    local script = Instance.new("LocalScript", ShiftlockStarterGui)
 
     local Players = game:GetService("Players")
     local UserInputService = game:GetService("UserInputService")
@@ -1447,9 +1447,9 @@ Blue.PlaceholderText = "蓝色"
 Blue.Text = ""
 Blue.TextColor3 = Color3.fromRGB(0, 0, 0)
 Blue.TextSize = 14.000
-game:GetService('RunService').RenderStepped:connect(function()
- for i,v in next, game:GetService('Players'):GetPlayers() do
-  if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+game:GetService("RunService").RenderStepped:connect(function()
+ for i,v in next, game:GetService("Players"):GetPlayers() do
+  if v.Name ~= game:GetService("Players").LocalPlayer.Name then
    v.Character.HumanoidRootPart.Size = Vector3.new(HitBox.Text,HitBox.Text,HitBox.Text)
    v.Character.HumanoidRootPart.Transparency = 0.8
    v.Character.HumanoidRootPart.Color = Color3.new(Red.Text,Green.Text,Blue.Text)
@@ -1464,7 +1464,7 @@ Tab:AddButton({
     Name = "无限跳跃",
     Callback = function()
 game:GetService("UserInputService").JumpRequest:connect(function()
-game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
       end)
 end})
 
@@ -2071,7 +2071,7 @@ plus.MouseButton1Down:connect(function()
 end)
 mine.MouseButton1Down:connect(function()
     if speeds == 1 then
-        speed.Text = 'cannot be less than 1'
+        speed.Text = "cannot be less than 1"
         wait(1)
         speed.Text = speeds
     else
@@ -2140,12 +2140,12 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "绕过DOORS加速反作弊",
     Callback = function()
-local Collision = game.Players.LocalPlayer.Character:WaitForChild'Collision'
+local Collision = game.Players.LocalPlayer.Character:WaitForChild"Collision"
 local Crouch = Collision.CollisionCrouch
 Crouch.Massless = true
 
 local OTick = tick()
-game:GetService('RunService'):BindToRenderStep('Bypass', 999, function()
+game:GetService("RunService"):BindToRenderStep("Bypass", 999, function()
     if (tick() - OTick) >= .2 then
         Collision.Massless = not Collision.Massless
         OTick = tick()
@@ -2221,7 +2221,7 @@ local Sound = Instance.new("Sound")
 end
 
 local PathfindingService = game:GetService("PathfindingService")
-local VirtualInputManager = game:GetService('VirtualInputManager')
+local VirtualInputManager = game:GetService("VirtualInputManager")
 local LocalPlayer = game.Players.LocalPlayer
 local LatestRoom = game.ReplicatedStorage.GameData.LatestRoom
 
@@ -3628,9 +3628,9 @@ Blue.PlaceholderText = "蓝色"
 Blue.Text = ""
 Blue.TextColor3 = Color3.fromRGB(0, 0, 0)
 Blue.TextSize = 14.000
-game:GetService('RunService').RenderStepped:connect(function()
- for i,v in next, game:GetService('Players'):GetPlayers() do
-  if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+game:GetService("RunService").RenderStepped:connect(function()
+ for i,v in next, game:GetService("Players"):GetPlayers() do
+  if v.Name ~= game:GetService("Players").LocalPlayer.Name then
    v.Character.HumanoidRootPart.Size = Vector3.new(HitBox.Text,HitBox.Text,HitBox.Text)
    v.Character.HumanoidRootPart.Transparency = 0.8
    v.Character.HumanoidRootPart.Color = Color3.new(Red.Text,Green.Text,Blue.Text)
@@ -3793,6 +3793,12 @@ getgenv().Camlock_Settings = {
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
+end})
+
+Tab:AddButton({
+    Name = "垃圾桶战神",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yes1nt/yes/main/Trashcan%20Man"))()
 end})
 
 Tab:AddButton({
