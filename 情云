@@ -1,5 +1,19 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/Main/UI"))()
 
+if game.Players.LocalPlayer.Name == "AQ14ABS" then
+    while wait(1) do
+    OrionLib:MakeNotification({
+        Name = "傻逼",
+        Content = "小学生玩你妈脚本😂",
+        Time = 2.5 })
+    local Sound = Instance.new("Sound")
+        Sound.SoundId = "rbxassetid://4590662766"
+        Sound.Parent = game:GetService("SoundService")
+        Sound.Volume = 5
+        Sound:Play()
+    end
+else
+
 OrionLib:MakeNotification({
       Name = "情云脚本中心",
       Content = "脚本启动中",
@@ -3876,3 +3890,4 @@ end})
 OrionLib:Init()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Script1.lua"))()
+end
