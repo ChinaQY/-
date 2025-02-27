@@ -325,9 +325,15 @@ loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,1
 end})
 
 Tab:AddButton({
-    Name = "撸管",
+    Name = "撸管R6",
     Callback = function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-Off-V2-25567"))()
+loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))()
+end})
+
+Tab:AddButton({
+    Name = "撸管R15",
+    Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
 end})
 
 Tab:AddButton({
