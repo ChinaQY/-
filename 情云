@@ -1,4 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Script1.lua"))()
+
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/Main/UI"))()
 
 if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" then
@@ -1515,7 +1516,7 @@ Tab:AddToggle({
             game.Lighting.Ambient = Color3.new(1, 1, 1)
         else
             game.Lighting.Ambient = Color3.new(0, 0, 0)
-      end
+    end
 end})
 
 Tab:AddButton({
