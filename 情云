@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/Main/UI"))()
 
-if game.Players.LocalPlayer.Name == "AQ14ABS" then
+if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" then
     while wait(1) do
     OrionLib:MakeNotification({
         Name = "傻逼",
