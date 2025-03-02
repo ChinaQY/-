@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Script1.lua"))()
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/Main/UI"))()
 
 if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" then
@@ -7,7 +8,7 @@ if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name =
         Content = "小学生玩你妈脚本😂",
         Time = 2.5 })
     local Sound = Instance.new("Sound")
-        Sound.SoundId = "rbxassetid://4590662766"
+        Sound.SoundId = "rbxassetid://6129291390"
         Sound.Parent = game:GetService("SoundService")
         Sound.Volume = 5
         Sound:Play()
@@ -3888,6 +3889,4 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 end})
 
 OrionLib:Init()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Script1.lua"))()
 end
