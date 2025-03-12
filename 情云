@@ -3715,12 +3715,6 @@ Tab:AddButton({
 loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\67\104\105\110\97\81\89\47\83\99\114\105\112\116\115\47\77\97\105\110\47\71\65\66\80"))()
 end})
 
-Tab:AddButton({
-    Name = "情云复活版",
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/GB"))()
-end})
-
 local Tab = Window:MakeTab({
       Name = "犯罪",
       Icon = "rbxassetid://17140853847",
