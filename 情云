@@ -46,28 +46,6 @@ local Tab = Window:MakeTab({
       PremiumOnly = false
 })
 
-Tab:AddToggle({
-    Name = "关闭聊天按钮 ( 防录屏泄露账号 )",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = false
-        else
-            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = true
-    end
-end})
-
-Tab:AddToggle({
-    Name = "关闭聊天界面 ( 防录屏泄露账号 )",
-    Default = false,
-    Callback = function(Value)
-        if Value then
-            game:GetService("CoreGui").ExperienceChat.appLayout.Visible = false
-        else
-            game:GetService("CoreGui").ExperienceChat.appLayout.Visible = true
-    end
-end})
-
 Tab:AddButton({
     Name = "IY Dex修复版",
     Callback = function()
