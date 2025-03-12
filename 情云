@@ -46,8 +46,19 @@ local Tab = Window:MakeTab({
       PremiumOnly = false
 })
 
+Tab:AddToggle({
+    Name = "开关聊天按钮 ( 防录屏泄露账号 )",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = false
+        else
+            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = true
+    end
+end})
+
 Tab:AddButton({
-    Name = "IYDex修复版",
+    Name = "IY Dex修复版",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Dex.luau"))()
 end})
@@ -335,7 +346,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 end})
 
 Tab:AddButton({
-    Name = "IY指令(中文版)",
+    Name = "IY指令 ( 中文版 )",
     Callback = function()
 loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,87,97,110,103,122,104,101,104,97,111,104,47,102,108,121,45,97,119,97,121,47,109,97,105,110,47,37,69,54,37,56,67,37,56,55,37,69,52,37,66,66,37,56,65,37,69,52,37,66,56,37,65,68,37,69,54,37,57,54,37,56,55,46,116,120,116})end)())))()
 end})
@@ -391,7 +402,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/ma
 end})
 
 Tab:AddButton({
-    Name = "情云自瞄(其实就是阿尔宙斯自瞄)",
+    Name = "阿尔宙斯自瞄",
     Callback = function()
 local Script_Title = "情云 <font color=\"rgb(255, 0, 0)\">|</font> 自瞄"
 
@@ -1061,7 +1072,7 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "自瞄锁头老版本(大范围)",
+    Name = "自瞄锁头老版本 ( 大范围 )",
     Callback = function()
 local fov = 100
 local RunService = game:GetService("RunService")
@@ -1130,7 +1141,7 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "自瞄锁头(斩念提供)",
+    Name = "自瞄锁头 ( 斩念提供 )",
     Callback = function()
 local fov = 100
 local smoothness = 10
@@ -1555,7 +1566,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
 end})
 
 Tab:AddButton({
-    Name = "动作(部分服务器不可用)",
+    Name = "动作 ( 部分服务器不可用 )",
     Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/Zj4NnKs6"))()
 end})
@@ -1579,7 +1590,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddTextbox({
-    Name = "移动速度(部分服务器没效果)",
+    Name = "移动速度 ( 部分服务器没效果 )",
     Default = "",
     TextDisappear = true,
     Callback = function(Value)
@@ -1587,7 +1598,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end})
 
 Tab:AddTextbox({
-    Name = "跳跃高度(部分服务器没效果)",
+    Name = "跳跃高度 ( 部分服务器没效果 )",
     Default = "",
     TextDisappear = true,
     Callback = function(Value)
@@ -1595,7 +1606,7 @@ game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 end})
 
 Tab:AddTextbox({
-    Name = "重力设置(部分服务器没效果)",
+    Name = "重力设置 ( 部分服务器没效果 )",
     Default = "",
     TextDisappear = true,
     Callback = function(Value)
@@ -2218,7 +2229,7 @@ loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105
 end})
 
 Tab:AddButton({
-    Name = "自动Rooms(请先开启所有带自动的功能否则不能自动躲柜子)",
+    Name = "自动Rooms ( 请先开启所有带自动的功能否则不能自动躲柜子 )",
     Callback = function()
 if game.PlaceId ~= 6839171747 or game.ReplicatedStorage.GameData.Floor.Value ~= "Rooms" then
 
@@ -2440,7 +2451,7 @@ loadstring(game:HttpGet("https://github.com/DocYogurt/DOORS/raw/main/Scripts/Gui
 end})
 
 Tab:AddButton({
-    Name = "NVCS-3000(夜视仪)",
+    Name = "NVCS-3000 ( 夜视仪 )",
     Callback = function()
 loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\67\104\105\110\97\81\89\47\83\99\114\105\112\116\115\47\77\97\105\110\47\78\86\67\83\45\51\48\48\48"))()
 end})
@@ -2578,7 +2589,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/ma
 end})
 
 Tab:AddButton({
-    Name = "情云自瞄(其实就是阿尔宙斯自瞄)",
+    Name = "阿尔宙斯自瞄",
     Callback = function()
 local Script_Title = "情云 <font color=\"rgb(255, 0, 0)\">|</font> 自瞄"
 
@@ -3248,7 +3259,7 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "自瞄锁头老版本(大范围)",
+    Name = "自瞄锁头老版本 ( 大范围 )",
     Callback = function()
 local fov = 100
 local RunService = game:GetService("RunService")
@@ -3317,7 +3328,7 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "自瞄锁头(斩念提供)",
+    Name = "自瞄锁头 ( 斩念提供 )",
     Callback = function()
 local fov = 100
 local smoothness = 10
@@ -3530,7 +3541,7 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "修改玩家碰撞体积箱(近战武器有效)",
+    Name = "修改玩家碰撞体积箱 ( 近战武器有效 )",
     Callback = function()
 local Close = Instance.new("TextButton")
 local Open2 = Instance.new("ScreenGui")
@@ -3687,10 +3698,27 @@ local Tab = Window:MakeTab({
       PremiumOnly = false
 })
 
+Tab:AddToggle({
+    Name = "开关聊天按钮 ( 防录屏泄露账号 )",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = false
+        else
+            game:GetService("CoreGui").TopBarApp.UnibarLeftFrame.UnibarMenu:WaitForChild("2").Visible = true
+    end
+end})
+
 Tab:AddButton({
     Name = "明月清风",
     Callback = function()
 loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\67\104\105\110\97\81\89\47\83\99\114\105\112\116\115\47\77\97\105\110\47\71\65\66\80"))()
+end})
+
+Tab:AddButton({
+    Name = "情云复活版",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/GB"))()
 end})
 
 local Tab = Window:MakeTab({
