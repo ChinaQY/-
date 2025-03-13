@@ -3901,7 +3901,18 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "关闭聊天界面 ( 防录屏泄露账号 )",
+    Name = "关闭聊天界面老版本 ( 防录屏泄露账号 )",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game.Players.LocalPlayer.PlayerGui.Chat.Frame.Visible = false
+        else
+            game.Players.LocalPlayer.PlayerGui.Chat.Frame.Visible = true
+    end
+end})
+
+Tab:AddToggle({
+    Name = "关闭聊天界面新版本 ( 防录屏泄露账号 )",
     Default = false,
     Callback = function(Value)
         if Value then
