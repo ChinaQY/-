@@ -3768,6 +3768,18 @@ setclipboard("https://linkvertise.com/1193953/free-criminality-gui")
 end})
 
 Tab:AddButton({
+    Name = "Max Hub",
+    Callback = function()
+script_key = "\76\68\99\89\71\75\85\112\105\97\118\107\67\101\78\101\109\86\78\116\100\81\87\88\107\116\85\85\102\84\102\100";
+_G.MaxHub = {
+    GlobalChat = false,
+    Notifications = true
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/993b07de445441e83e15ce5fde260d5f.lua"))()
+end})
+
+Tab:AddButton({
     Name = "qwertyu4t55567rgdf的犯罪脚本",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/qwertyu4t55567rgdf/fling/main/Loader.lua"))()
