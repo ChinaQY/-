@@ -31,7 +31,7 @@ local Window = OrionLib:MakeWindow({Name = "情云脚本中心", HidePremium = f
 
 local Tab = Window:MakeTab({
       Name = "公告",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -42,7 +42,7 @@ Tab:AddLabel("QQ群 : 834856433")
 
 local Tab = Window:MakeTab({
       Name = "通用功能",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -1574,7 +1574,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "玩家",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2167,7 +2167,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "DOORS",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2225,7 +2225,7 @@ if game.PlaceId ~= 6839171747 or game.ReplicatedStorage.GameData.Floor.Value ~= 
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "提示";
     Text = "请到Rooms里执行";
-    Icon = "rbxassetid://17140853847";
+    Icon = "rbxassetid://14250466898";
     Duration = 5;
 })
     
@@ -2241,7 +2241,7 @@ elseif workspace:FindFirstChild("PathFindPartsFolder") then
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "提示";
     Text = "?";
-    Icon = "rbxassetid://17140853847";
+    Icon = "rbxassetid://14250466898";
     Duration = 5;
 })
 
@@ -2346,7 +2346,7 @@ LatestRoom:GetPropertyChangedSignal("Value"):Connect(function()
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "提示";
     Text = "已到达A-1000";
-    Icon = "rbxassetid://17140853847";
+    Icon = "rbxassetid://14250466898";
     Duration = 5;
 })
         return
@@ -2429,7 +2429,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "DOORS物品",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2471,7 +2471,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "Rooms & Doors",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2487,7 +2487,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "RFF",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2499,7 +2499,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "压力",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2523,7 +2523,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "格蕾丝",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -2535,7 +2535,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "俄亥俄州",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3683,7 +3683,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "内脏与黑火药",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3694,8 +3694,915 @@ loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116
 end})
 
 local Tab = Window:MakeTab({
+      Name = "内脏与黑火药动画",
+      Icon = "rbxassetid://14250466898",
+      PremiumOnly = false
+})
+
+local plr = game:GetService("Players").LocalPlayer
+local char
+local connect
+connect = plr.CharacterAdded:Connect(function(c)
+char = c
+end)
+
+local flags = {
+    ShamblerAnim = false,
+    BomberAnim = false,
+    RunnerAnim = false,
+    ZapperAnim = false,
+    IgniterAnim = false,
+    HeadlessAnim = false,
+    ChargeAnim = false,
+    ChargeLanceAnim = false,
+    ChargeHeavyAnim = false,
+    HeadlessHorsemanAnim1 = false,
+    HeadlessHorsemanAnim2 = false
+}
+
+Tab:AddToggle({
+    Name = "Shambler动画",
+    Default = false,
+    Callback = function(Value)
+    flags.ShamblerAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.ShamblerAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "ShamblerIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ShamblerIdle"
+                    Anim.AnimationId = "rbxassetid://12333488814"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ShamblerWalk" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ShamblerIdle"
+                    Anim.AnimationId = "rbxassetid://12333488814"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ShamblerIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Walks = {"14463697470","14463730540","14463758355","14464590442"}
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ShamblerWalk"
+                    Anim.AnimationId = "rbxassetid://"..Walks[math.random(1, #Walks)]
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.ShamblerAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "ShamblerWalk" then
+            v:Stop()
+       elseif tostring(v) == "ShamblerIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Bomber动画",
+    Default = false,
+    Callback = function(Value)
+    flags.BomberAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.BomberAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "BomberIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "BomberIdle"
+                    Anim.AnimationId = "rbxassetid://13211198049"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "BomberWalk" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "BomberIdle"
+                    Anim.AnimationId = "rbxassetid://13211198049"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "BomberIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "BomberWalk"
+                    Anim.AnimationId = "rbxassetid://13211207597"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.BomberAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "BomberWalk" then
+            v:Stop()
+       elseif tostring(v) == "BomberIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Runner动画",
+    Default = false,
+    Callback = function(Value)
+    flags.RunnerAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.RunnerAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "RunnerIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "RunnerIdle"
+                    Anim.AnimationId = "rbxassetid://12581784105"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "RunnerRun" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "RunnerIdle"
+                    Anim.AnimationId = "rbxassetid://12581784105"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "RunnerIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Walks = {"12581786940","12581785298","12581788539"}
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "RunnerRun"
+                    Anim.AnimationId = "rbxassetid://"..Walks[math.random(1, #Walks)]
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.RunnerAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "RunnerRun" then
+            v:Stop()
+       elseif tostring(v) == "RunnerIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Zapper动画",
+    Default = false,
+    Callback = function(Value)
+    flags.ZapperAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+        while flags.ZapperAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 or humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ZapperWalk" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ZapperIdle"
+                    Anim.AnimationId = "rbxassetid://14498563473"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ZapperIdle" then
+                    v:Stop()
+                    idle = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ZapperWalk"
+                    Anim.AnimationId = "rbxassetid://14498289874"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                end
+            end
+        end
+        repeat task.wait() until not flags.ZapperAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "ZapperWalk" then
+            v:Stop()
+       elseif tostring(v) == "ZapperIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Igniter动画",
+    Default = false,
+    Callback = function(Value)
+    flags.IgniterAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.IgniterAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "IgniterIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "IgniterIdle"
+                    Anim.AnimationId = "rbxassetid://14678879479"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "IgniterWalk" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "IgniterIdle"
+                    Anim.AnimationId = "rbxassetid://14678879479"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "IgniterIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "IgniterWalk"
+                    Anim.AnimationId = "rbxassetid://14678880308"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.IgniterAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "IgniterWalk" then
+            v:Stop()
+       elseif tostring(v) == "IgniterIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Headless动画",
+    Default = false,
+    Callback = function(Value)
+    flags.HeadlessAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.HeadlessAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "HeadlessIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessIdle"
+                    Anim.AnimationId = "rbxassetid://107080941320600"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessWalk" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessIdle"
+                    Anim.AnimationId = "rbxassetid://107080941320600"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessWalk"
+                    Anim.AnimationId = "rbxassetid://74764025513892"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.HeadlessAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "HeadlessWalk" then
+            v:Stop()
+       elseif tostring(v) == "HeadlessIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "Charge动画",
+    Default = false,
+    Callback = function(Value)
+    flags.ChargeAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.ChargeAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "ChargeIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeIdle"
+                    Anim.AnimationId = "rbxassetid://14284611111"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeRun" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeIdle"
+                    Anim.AnimationId = "rbxassetid://14284611111"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeRun"
+                    Anim.AnimationId = "rbxassetid://14284623849"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.ChargeAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "ChargeRun" then
+            v:Stop()
+       elseif tostring(v) == "ChargeIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "ChargeLanceAnim动画",
+    Default = false,
+    Callback = function(Value)
+    flags.ChargeLanceAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.ChargeLanceAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "ChargeLanceIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeLanceIdle"
+                    Anim.AnimationId = "rbxassetid://15669227704"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeLanceRun" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeLanceIdle"
+                    Anim.AnimationId = "rbxassetid://15669227704"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeLanceIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeLanceRun"
+                    Anim.AnimationId = "rbxassetid://15669228671"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.ChargeLanceAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "ChargeLanceRun" then
+            v:Stop()
+       elseif tostring(v) == "ChargeLanceIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "ChargeHeavy动画",
+    Default = false,
+    Callback = function(Value)
+    flags.ChargeHeavyAnim = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.ChargeHeavyAnim do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "ChargeHeavyIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeHeavyIdle"
+                    Anim.AnimationId = "rbxassetid://14284611111"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeHeavyRun" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeHeavyIdle"
+                    Anim.AnimationId = "rbxassetid://14284611111"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "ChargeHeavyIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "ChargeHeavyRun"
+                    Anim.AnimationId = "rbxassetid://17406602570"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.ChargeHeavyAnim
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "ChargeHeavyRun" then
+            v:Stop()
+       elseif tostring(v) == "ChargeHeavyIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "HeadlessHorseman动画1",
+    Default = false,
+    Callback = function(Value)
+    flags.HeadlessHorsemanAnim1 = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.HeadlessHorsemanAnim1 do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "HeadlessHorsemanIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorsemanIdle"
+                    Anim.AnimationId = "rbxassetid://13936362530"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessHorseman" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorsemanIdle"
+                    Anim.AnimationId = "rbxassetid://13936362530"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessHorsemanIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorseman"
+                    Anim.AnimationId = "rbxassetid://13936362530"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.HeadlessHorsemanAnim1
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "HeadlessHorseman" then
+            v:Stop()
+       elseif tostring(v) == "HeadlessHorsemanIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddToggle({
+    Name = "HeadlessHorseman动画2",
+    Default = false,
+    Callback = function(Value)
+    flags.HeadlessHorsemanAnim2 = Value
+    if Value then
+    local walk = false
+    local idle = false
+    local try = false
+        while flags.HeadlessHorsemanAnim2 do
+            wait(0.0005)
+            if char then
+            local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+                for i,hold in next, Hum:GetPlayingAnimationTracks() do
+                if tostring(hold) == "Hold" or tostring(hold) == "WalkAnim" then
+                    hold:Stop()
+                    end
+                if idle and tostring(hold) == "HeadlessHorsemanIdle" and not try then
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorsemanIdle"
+                    Anim.AnimationId = "rbxassetid://13936362530"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.005)
+                    k:Play()
+                    task.wait(0.1)
+                    k:Play()
+                    try = true
+                    end
+                end
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0 then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessHorseman" then
+                    v:Stop()
+                    walk = false
+                        end
+                    end
+                    if not idle then
+                    repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorsemanIdle"
+                    Anim.AnimationId = "rbxassetid://13936362530"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    task.wait(0.01)
+                    k:Play()
+                    idle = true
+                    end
+                elseif not walk then
+                for i,v in next, Hum:GetPlayingAnimationTracks() do
+                    if tostring(v) == "HeadlessHorsemanIdle" then
+                    v:Stop()
+                    idle = false
+                    try = false
+                        end
+                    end
+                    local Anim = Instance.new("Animation")
+                    Anim.Name = "HeadlessHorseman"
+                    Anim.AnimationId = "rbxassetid://14998290995"
+                    local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+                    k:Play()
+                    walk = true
+                    try = false
+                end
+            end
+        end
+        repeat task.wait() until not flags.HeadlessHorsemanAnim2
+        local Hum = char:FindFirstChildOfClass("Humanoid") or char:FindFirstChildOfClass("AnimationController")
+       for i,v in next, Hum:GetPlayingAnimationTracks() do
+       if tostring(v) == "HeadlessHorseman" then
+            v:Stop()
+       elseif tostring(v) == "HeadlessHorsemanIdle" then
+            v:Stop()
+            end
+        end
+    end
+end})
+
+Tab:AddButton({
+    Name = "Zapper挥砍动画",
+    Callback = function()
+    if char then
+        local tool = char:FindFirstChild("Axe") or char:FindFirstChild("Pickaxe") or char:FindFirstChild("Baguette") or plr.Backpack:FindFirstChild("Axe") or plr.Backpack:FindFirstChild("Pickaxe") or plr.Backpack:FindFirstChild("Baguette")
+        if tool.Parent ~= char then
+        tool.Parent = char
+        end
+        local Handle = Instance.new("Part", tool)
+        Handle.Name = "Handle"
+        Handle.CanCollide = false
+        Handle.Transparency = 1
+        task.spawn(function()
+        task.wait(2.5)
+        Handle:Destroy()
+        end)
+        task.spawn(function()
+            repeat
+            task.wait()
+            pcall(function()
+            end)
+            until not Handle
+        end)
+        local Anim = Instance.new("Animation")
+        Anim.Name = "Zapper Swing"
+        Anim.AnimationId = "rbxassetid://14499470197"
+        local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Anim)
+        k:Play()
+        Handle.Touched:Connect(function(Hit)
+        pcall(function()
+        if Hit.Parent ~= char and Hit.Parent ~= Model and Hit.Parent.Name ~= "3D_Clothing" then
+               if Hit.Parent.Zombie then
+               local Head = {
+               [1] = "HitZombie",
+               [2] = Hit.Parent,
+               [3] = Hit.Parent.Head.CFrame.Position,
+               [4] = true
+               }
+               tool.RemoteEvent:FireServer("Swing","Over")
+               tool.RemoteEvent:FireServer(unpack(Head))
+                    end
+                end
+            end)
+        end)
+    end
+end})
+
+local Tab = Window:MakeTab({
       Name = "犯罪",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3793,7 +4700,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "最强战场",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3855,7 +4762,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "被遗弃",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3879,7 +4786,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "脚本中心",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
@@ -3897,7 +4804,7 @@ end})
 
 local Tab = Window:MakeTab({
       Name = "其他",
-      Icon = "rbxassetid://17140853847",
+      Icon = "rbxassetid://14250466898",
       PremiumOnly = false
 })
 
