@@ -4246,7 +4246,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "ChargeLanceAnim动画",
+    Name = "ChargeLance动画",
     Default = false,
     Callback = function(Value)
     flags.ChargeLanceAnim = Value
