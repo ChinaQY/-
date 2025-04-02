@@ -2501,15 +2501,9 @@ loadstring(game:HttpGet("https://github.com/DocYogurt/Main/raw/main/Scripts/Pres
 end})
 
 Tab:AddButton({
-    Name = "压力万圣节",
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Pressure"))()
-end})
-
-Tab:AddButton({
     Name = "情云压力",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Pressure.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Pressure"))()
 end})
 
 local Tab = Window:MakeTab({
