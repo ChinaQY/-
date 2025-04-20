@@ -2,7 +2,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/Main/UI"))()
 
-if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" or game.Players.LocalPlayer.Name == "ah_kdj3" or game.Players.LocalPlayer.Name == "luoyang100616" or game.Players.LocalPlayer.Name == "hdjdje675" or game.Players.LocalPlayer.Name == "hvck114" or game.Players.LocalPlayer.Name == "CC_hdcu" or game.Players.LocalPlayer.Name == "rzc1238" or game.Players.LocalPlayer.Name == "rzc12378" or game.Players.LocalPlayer.Name == "rzc12398" then
+if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" or game.Players.LocalPlayer.Name == "ah_kdj3" or game.Players.LocalPlayer.Name == "luoyang100616" or game.Players.LocalPlayer.Name == "hdjdje675" or game.Players.LocalPlayer.Name == "hvck114" or game.Players.LocalPlayer.Name == "CC_hdcu" or game.Players.LocalPlayer.Name == "rzc1238" or game.Players.LocalPlayer.Name == "rzc12378" or game.Players.LocalPlayer.Name == "rzc12398" or game.Players.LocalPlayer.Name == "qazwsxuruu" then
     game.Players.LocalPlayer:Kick("Exploiting😂")
 else
 
