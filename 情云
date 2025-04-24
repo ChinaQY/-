@@ -347,7 +347,7 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "Head",
     AutoPrediction = false,
     Notification = true,
@@ -366,7 +366,7 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "HumanoidRootPart",
     AutoPrediction = false,
     Notification = true,
@@ -2540,7 +2540,7 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "Head",
     AutoPrediction = false,
     Notification = true,
@@ -2559,7 +2559,7 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "HumanoidRootPart",
     AutoPrediction = false,
     Notification = true,
@@ -4607,7 +4607,7 @@ Tab:AddButton({
     Name = "自瞄 ( 头部 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "Head",
     AutoPrediction = false,
     Notification = true,
@@ -4626,7 +4626,7 @@ Tab:AddButton({
     Name = "自瞄 ( 身体 )",
     Callback = function()
 getgenv().Camlock_Settings = {
-    Prediction = 0.100,
+    Prediction = 0,
     AimPart = "HumanoidRootPart",
     AutoPrediction = false,
     Notification = true,
