@@ -4187,7 +4187,7 @@ Tab:AddToggle({
                 if idle and tostring(hold) == "CuirassierIdle" and not try then
                     local Animation = Instance.new("Animation")
                     Animation.Name = "CuirassierIdle"
-                    Animation.AnimationId = "rbxassetid://76558132973831"
+                    Animation.AnimationId = "rbxassetid://87579228279296"
                     local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Animation)
                     task.wait(0.005)
                     k:Play()
@@ -4208,7 +4208,7 @@ Tab:AddToggle({
                     repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
                     local Animation = Instance.new("Animation")
                     Animation.Name = "CuirassierIdle"
-                    Animation.AnimationId = "rbxassetid://76558132973831"
+                    Animation.AnimationId = "rbxassetid://87579228279296"
                     local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Animation)
                     task.wait(0.01)
                     k:Play()
@@ -4224,7 +4224,7 @@ Tab:AddToggle({
                     end
                     local Animation = Instance.new("Animation")
                     Animation.Name = "CuirassierWalk"
-                    Animation.AnimationId = "rbxassetid://82153888450489"
+                    Animation.AnimationId = "rbxassetid://102081698785465"
                     local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Animation)
                     k:Play()
                     walk = true
@@ -4264,7 +4264,7 @@ Tab:AddToggle({
                 if idle and tostring(hold) == "CuirassierIdle" and not try then
                     local Animation = Instance.new("Animation")
                     Animation.Name = "CuirassierIdle"
-                    Animation.AnimationId = "rbxassetid://76558132973831"
+                    Animation.AnimationId = "rbxassetid://87579228279296"
                     local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Animation)
                     task.wait(0.005)
                     k:Play()
@@ -4285,7 +4285,7 @@ Tab:AddToggle({
                     repeat task.wait() until humanoid.MoveDirection.X == 0 and humanoid.MoveDirection.Z == 0
                     local Animation = Instance.new("Animation")
                     Animation.Name = "CuirassierIdle"
-                    Animation.AnimationId = "rbxassetid://76558132973831"
+                    Animation.AnimationId = "rbxassetid://87579228279296"
                     local k = char:FindFirstChildOfClass("Humanoid"):LoadAnimation(Animation)
                     task.wait(0.01)
                     k:Play()
