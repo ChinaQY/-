@@ -4922,8 +4922,6 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "情云Forsaken",
     Callback = function()
-_G.Enable = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/ForsakenOldc00lkidd"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Forsaken"))()
 end})
 
