@@ -653,6 +653,8 @@ function OrionLib:MakeWindow(WindowConfig)
               Sound.Parent = game:GetService("SoundService")
               Sound.Volume = 5
               Sound:Play()
+              task.wait(1.933)
+              Sound:Destroy()
 
         WindowConfig.CloseCallback()
     end)
