@@ -16,6 +16,8 @@ local Sound = Instance.new("Sound")
       Sound.Parent = game:GetService("SoundService")
       Sound.Volume = 5
       Sound:Play()
+      task.wait(1.933)
+      Sound:Destroy()
 
 local Window = OrionLib:MakeWindow({Name = "情云脚本中心", HidePremium = false, SaveConfig = false, IntroText = "情云脚本中心", ConfigFolder = "情云脚本中心"})
 
