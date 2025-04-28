@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "IY Dex修复版",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/Dex.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
 end})
 
 Tab:AddButton({
