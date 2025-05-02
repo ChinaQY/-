@@ -1645,9 +1645,9 @@ local Storage = Instance.new("Folder")
 Storage.Parent = CoreGui
 Storage.Name = "Highlight_Storage"
 
-local function Highlight(plr)
+local function Highlight(Player)
     local Highlight = Instance.new("Highlight")
-    Highlight.Name = plr.Name
+    Highlight.Name = Player.Name
     Highlight.FillColor = FillColor
     Highlight.DepthMode = DepthMode
     Highlight.FillTransparency = FillTransparency
@@ -1655,12 +1655,12 @@ local function Highlight(plr)
     Highlight.OutlineTransparency = 0
     Highlight.Parent = Storage
 
-    local plrchar = plr.Character
+    local plrchar = Player.Character
     if plrchar then
         Highlight.Adornee = plrchar
     end
 
-    connections[plr] = plr.CharacterAdded:Connect(function(char)
+    connections[Player] = Player.CharacterAdded:Connect(function(char)
         Highlight.Adornee = char
     end)
 end
@@ -1670,13 +1670,13 @@ for i,v in next, Players:GetPlayers() do
     Highlight(v)
 end
 
-Players.PlayerRemoving:Connect(function(plr)
-    local plrname = plr.Name
+Players.PlayerRemoving:Connect(function(Player)
+    local plrname = Player.Name
     if Storage[plrname] then
         Storage[plrname]:Destroy()
     end
-    if connections[plr] then
-        connections[plr]:Disconnect()
+    if connections[Player] then
+        connections[Player]:Disconnect()
     end
 end)
 end})
@@ -1904,8 +1904,8 @@ onof.MouseButton1Down:connect(function()
 
 
 
-        local plr = game.Players.LocalPlayer
-        local torso = plr.Character.Torso
+        local Player = game.Players.LocalPlayer
+        local torso = Player.Character.Torso
         local flying = true
         local deb = true
         local ctrl = {f = 0, b = 0, l = 0, r = 0}
@@ -1922,7 +1922,7 @@ onof.MouseButton1Down:connect(function()
         bv.velocity = Vector3.new(0,0.1,0)
         bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
         if nowe == true then
-            plr.Character.Humanoid.PlatformStand = true
+            Player.Character.Humanoid.PlatformStand = true
         end
         while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
             game:GetService("RunService").RenderStepped:Wait()
@@ -1953,7 +1953,7 @@ onof.MouseButton1Down:connect(function()
         speed = 0
         bg:Destroy()
         bv:Destroy()
-        plr.Character.Humanoid.PlatformStand = false
+        Player.Character.Humanoid.PlatformStand = false
         game.Players.LocalPlayer.Character.Animate.Disabled = false
         tpwalking = false
 
@@ -1961,8 +1961,8 @@ onof.MouseButton1Down:connect(function()
 
 
     else
-        local plr = game.Players.LocalPlayer
-        local UpperTorso = plr.Character.UpperTorso
+        local Player = game.Players.LocalPlayer
+        local UpperTorso = Player.Character.UpperTorso
         local flying = true
         local deb = true
         local ctrl = {f = 0, b = 0, l = 0, r = 0}
@@ -1979,7 +1979,7 @@ onof.MouseButton1Down:connect(function()
         bv.velocity = Vector3.new(0,0.1,0)
         bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
         if nowe == true then
-            plr.Character.Humanoid.PlatformStand = true
+            Player.Character.Humanoid.PlatformStand = true
         end
         while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
             wait()
@@ -2011,7 +2011,7 @@ onof.MouseButton1Down:connect(function()
         speed = 0
         bg:Destroy()
         bv:Destroy()
-        plr.Character.Humanoid.PlatformStand = false
+        Player.Character.Humanoid.PlatformStand = false
         game.Players.LocalPlayer.Character.Animate.Disabled = false
         tpwalking = false
 
@@ -3698,10 +3698,10 @@ local Tab = Window:MakeTab({
       PremiumOnly = false
 })
 
-local plr = game:GetService("Players").LocalPlayer
+local Player = game:GetService("Players").LocalPlayer
 local char
 local connect
-connect = plr.CharacterAdded:Connect(function(c)
+connect = Player.CharacterAdded:Connect(function(c)
 char = c
 end)
 
@@ -4712,7 +4712,7 @@ Tab:AddButton({
     Name = "Zapper挥砍动画",
     Callback = function()
     if char then
-        local tool = char:FindFirstChild("Axe") or char:FindFirstChild("Pickaxe") or char:FindFirstChild("Baguette") or plr.Backpack:FindFirstChild("Axe") or plr.Backpack:FindFirstChild("Pickaxe") or plr.Backpack:FindFirstChild("Baguette")
+        local tool = char:FindFirstChild("Axe") or char:FindFirstChild("Pickaxe") or char:FindFirstChild("Baguette") or Player.Backpack:FindFirstChild("Axe") or Player.Backpack:FindFirstChild("Pickaxe") or Player.Backpack:FindFirstChild("Baguette")
         if tool.Parent ~= char then
         tool.Parent = char
         end
