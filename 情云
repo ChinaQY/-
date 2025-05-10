@@ -1587,14 +1587,6 @@ Tab:AddTextbox({
 game.Workspace.Gravity = Value
 end})
 
-Tab:AddButton({
-    Name = "无限跳跃",
-    Callback = function()
-    game:GetService("UserInputService").JumpRequest:connect(function()
-    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState("Jumping")
-    end)
-end})
-
 Tab:AddToggle({
     Name = "穿墙",
     Default = false,
@@ -1619,6 +1611,14 @@ Tab:AddToggle({
     else
         Noclip = false
     end
+end})
+
+Tab:AddButton({
+    Name = "无限跳跃",
+    Callback = function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+    end)
 end})
 
 Tab:AddButton({
