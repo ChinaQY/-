@@ -1482,14 +1482,6 @@ end)
 end})
 
 Tab:AddButton({
-    Name = "无限跳跃",
-    Callback = function()
-game:GetService("UserInputService").JumpRequest:connect(function()
-game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
-    end)
-end})
-
-Tab:AddButton({
     Name = "防甩飞",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/AntiFling.lua"))()
@@ -1593,6 +1585,19 @@ Tab:AddTextbox({
     TextDisappear = true,
     Callback = function(Value)
 game.Workspace.Gravity = Value
+end})
+
+Tab:AddToggle({
+    Name = "无限跳跃",
+    Default = false,
+    Callback = function(Value)
+    if Value then
+        InfiniteJump = game:GetService("UserInputService").JumpRequest:connect(function()
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
+        end)
+    else
+        InfiniteJump:Disconnect()
+    end
 end})
 
 Tab:AddToggle({
