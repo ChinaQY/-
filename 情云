@@ -1587,17 +1587,12 @@ Tab:AddTextbox({
 game.Workspace.Gravity = Value
 end})
 
-Tab:AddToggle({
+Tab:AddButton({
     Name = "无限跳跃",
-    Default = false,
-    Callback = function(Value)
-    if Value then
-        InfiniteJump = game:GetService("UserInputService").JumpRequest:connect(function()
-            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
-        end)
-    else
-        InfiniteJump:Disconnect()
-    end
+    Callback = function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState("Jumping")
+    end)
 end})
 
 Tab:AddToggle({
