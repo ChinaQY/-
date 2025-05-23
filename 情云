@@ -6,6 +6,10 @@ if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name =
     game.Players.LocalPlayer:Kick("Exploiting😂")
 else
 
+if game.GameId == 7661389505 then
+    game.Players.LocalPlayer:Kick("同人游戏都要开挂活不起了吗?😂")
+else
+
 OrionLib:MakeNotification({
       Name = "情云脚本中心",
       Content = "脚本启动中",
@@ -4986,4 +4990,5 @@ Tab:AddToggle({
 end})
 
 OrionLib:Init()
+end
 end
