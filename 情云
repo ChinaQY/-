@@ -4920,6 +4920,57 @@ game:GetService("CoreGui")["Discord"]:Destroy()
 end})
 
 local Tab = Window:MakeTab({
+      Name = "终极战场",
+      Icon = "rbxassetid://14250466898",
+      PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "自瞄 ( 头部 )",
+    Callback = function()
+getgenv().Camlock_Settings = {
+    Prediction = 0,
+    AimPart = "Head",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
+end})
+
+Tab:AddButton({
+    Name = "自瞄 ( 身体 )",
+    Callback = function()
+getgenv().Camlock_Settings = {
+    Prediction = 0,
+    AimPart = "HumanoidRootPart",
+    AutoPrediction = false,
+    Notification = true,
+    Button = true,
+    AntiGroundShots = false,
+    UnderGroundResolver = false,
+    Version = "2.5.1",
+    Credits = "space_0999",
+    DiscordServer = "discord.gg/SKhamGzTdn"
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/main/Scripts/Cam%20Lock.lua"))()
+end})
+
+Tab:AddToggle({
+    Name = "假防御",
+    Default = false,
+    Callback = function(Value)
+    game:GetService("ReplicatedStorage").Remotes.Combat.Block:FireServer(Value)
+end})
+
+local Tab = Window:MakeTab({
       Name = "被遗弃",
       Icon = "rbxassetid://14250466898",
       PremiumOnly = false
