@@ -4809,7 +4809,7 @@ Tab:AddButton({
     for _, Value in next, getgc(true) do
         if typeof(Value) == "table" then
             if rawget(Value, "indexInstance") or rawget(Value, "newindexInstance") or rawget(Value, "newIndexInstance") then
-                Value.tvk = {"kick", function() return end}
+                Value.tvk = {"kick", function() return task.wait(9e9) end}
             end
         end
     end
