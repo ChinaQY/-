@@ -4804,15 +4804,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/Trip-Hub/ma
 end})
 
 Tab:AddButton({
-    Name = "绕过Criminology踢出检测",
+    Name = "防Criminology踢出",
     Callback = function()
-for _, Value in next, getgc(true) do
-    if typeof(Value) == "table" then
-        if rawget(Value, "indexInstance") or rawget(Value, "newindexInstance") or rawget(Value, "newIndexInstance") then
-            Value.tvk = {"kick", function() return task.wait(9e9) end}
+    for _, Value in next, getgc(true) do
+        if typeof(Value) == "table" then
+            if rawget(Value, "indexInstance") or rawget(Value, "newindexInstance") or rawget(Value, "newIndexInstance") then
+                Value.tvk = {"kick", function() return end}
+            end
         end
     end
-end
 end})
 
 Tab:AddButton({
