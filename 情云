@@ -37,6 +37,27 @@ local Tab = Window:MakeTab({
       PremiumOnly = false
 })
 
+Tab:AddToggle({
+    Name = "大运",
+    Default = false,
+    Callback = function(Value)
+    if Value then
+        local Car = game:GetObjects("rbxassetid://78896584994504")[1]
+        Car.car.CanCollide = false
+        Car.Parent = workspace
+        spawn(function()
+            ToggleCar = game:GetService("RunService").RenderStepped:Connect(function()
+                Car.car:PivotTo(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame * CFrame.new(1.3, 0, 1.6))
+            end)
+        end)
+    else
+        if ToggleCar then
+            ToggleCar:Disconnect()
+            Car:Destroy()
+        end
+    end
+end})
+
 Tab:AddButton({
     Name = "IY Dex修复版",
     Callback = function()
