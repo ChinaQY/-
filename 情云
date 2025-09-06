@@ -5,24 +5,24 @@ if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name =
 else
 
 OrionLib:MakeNotification({
-      Name = "脚本中心",
-      Content = "脚本启动中",
-      Time = 2.5 })
+    Name = "脚本中心",
+    Content = "脚本启动中",
+    Time = 2.5 })
 
 local Sound = Instance.new("Sound")
-      Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game:GetService("SoundService")
-      Sound.Volume = 5
-      Sound:Play()
-      Sound.Ended:Wait()
-      Sound:Destroy()
+    Sound.SoundId = "rbxassetid://4590662766"
+    Sound.Parent = game:GetService("SoundService")
+    Sound.Volume = 5
+    Sound:Play()
+    Sound.Ended:Wait()
+    Sound:Destroy()
 
 local Window = OrionLib:MakeWindow({Name = "脚本中心", HidePremium = false, SaveConfig = false, IntroText = "脚本中心", ConfigFolder = "脚本中心"})
 
 local Tab = Window:MakeTab({
-      Name = "公告",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "公告",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddParagraph("作者","情云")
@@ -32,9 +32,9 @@ Tab:AddLabel("QQ群 : 834856433")
 Tab:AddLabel("DC群组 : https://discord.gg/KxZX9pP6vh")
 
 local Tab = Window:MakeTab({
-      Name = "通用功能",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "通用功能",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddToggle({
@@ -976,9 +976,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/
 end})
 
 local Tab = Window:MakeTab({
-      Name = "玩家",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "玩家",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddTextbox({
@@ -1577,9 +1577,9 @@ end)
 end})
 
 local Tab = Window:MakeTab({
-      Name = "DOORS",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "DOORS",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -1641,10 +1641,10 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 })
     
 local Sound = Instance.new("Sound")
-      Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game:GetService("SoundService")
-      Sound.Volume = 5
-      Sound:Play()
+    Sound.SoundId = "rbxassetid://4590662766"
+    Sound.Parent = game:GetService("SoundService")
+    Sound.Volume = 5
+    Sound:Play()
     
     return
 elseif workspace:FindFirstChild("PathFindPartsFolder") then
@@ -1657,10 +1657,10 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 })
 
 local Sound = Instance.new("Sound")
-      Sound.SoundId = "rbxassetid://4590662766"
-      Sound.Parent = game:GetService("SoundService")
-      Sound.Volume = 5
-      Sound:Play()
+    Sound.SoundId = "rbxassetid://4590662766"
+    Sound.Parent = game:GetService("SoundService")
+    Sound.Volume = 5
+    Sound:Play()
 
     return
 end
@@ -1839,9 +1839,9 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/DOORS-Custom-Entity-S*er-V2-
 end})
 
 local Tab = Window:MakeTab({
-      Name = "DOORS物品",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "DOORS物品",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -1881,13 +1881,13 @@ loadstring(game:HttpGet("https://pastebin.com/raw/v2yEJYmu"))()
 end})
 
 local Tab = Window:MakeTab({
-      Name = "Rooms & Doors",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "Rooms & Doors",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-      Name = "情云与DX共同制作"
+    Name = "情云与DX共同制作"
 })
 
 Tab:AddButton({
@@ -1897,9 +1897,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
-      Name = "THE FOUNDATION",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "THE FOUNDATION",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -1909,9 +1909,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
-      Name = "压力",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "压力",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -1927,9 +1927,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
-      Name = "俄亥俄州",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "俄亥俄州",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -2474,9 +2474,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-QY/Main/Ohio
 end})
 
 local Tab = Window:MakeTab({
-      Name = "内脏与黑火药",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "内脏与黑火药",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -2486,9 +2486,9 @@ loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116
 end})
 
 local Tab = Window:MakeTab({
-      Name = "内脏与黑火药动画",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "内脏与黑火药动画",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 local Player = game:GetService("Players").LocalPlayer
@@ -3549,9 +3549,9 @@ Tab:AddButton({
 end})
 
 local Tab = Window:MakeTab({
-      Name = "莱克星顿与康科德",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "莱克星顿与康科德",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -3561,9 +3561,9 @@ loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116
 end})
 
 local Tab = Window:MakeTab({
-      Name = "犯罪",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "犯罪",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -3659,9 +3659,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Vuubvyc/UNDETECTEDWAR
 end})
 
 local Tab = Window:MakeTab({
-      Name = "最强战场",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "最强战场",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -3721,9 +3721,9 @@ game:GetService("CoreGui")["Discord"]:Destroy()
 end})
 
 local Tab = Window:MakeTab({
-      Name = "被遗弃",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "被遗弃",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -3745,9 +3745,9 @@ loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitS
 end})
 
 local Tab = Window:MakeTab({
-      Name = "脚本中心",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "脚本中心",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 Tab:AddButton({
@@ -3763,9 +3763,9 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 end})
 
 local Tab = Window:MakeTab({
-      Name = "其他",
-      Icon = "rbxassetid://14250466898",
-      PremiumOnly = false
+    Name = "其他",
+    Icon = "rbxassetid://14250466898",
+    PremiumOnly = false
 })
 
 OrionLib:Init()
