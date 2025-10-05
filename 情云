@@ -1898,18 +1898,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/
 end})
 
 local Tab = Window:MakeTab({
-    Name = "THE FOUNDATION",
-    Icon = "rbxassetid://14250466898",
-    PremiumOnly = false
-})
-
-Tab:AddButton({
-    Name = "情云THE FOUNDATION",
-    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChinaQY/Scripts/Main/THE%20FOUNDATION"))()
-end})
-
-local Tab = Window:MakeTab({
     Name = "压力",
     Icon = "rbxassetid://14250466898",
     PremiumOnly = false
