@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Chin
 
 if game.Players.LocalPlayer.Name == "AQ14ABS" or game.Players.LocalPlayer.Name == "edc12363" or game.Players.LocalPlayer.Name == "onygfvjop" or game.Players.LocalPlayer.Name == "ah_kdj3" or game.Players.LocalPlayer.Name == "luoyang100616" or game.Players.LocalPlayer.Name == "hdjdje675" or game.Players.LocalPlayer.Name == "qazwsxuruu" or game.Players.LocalPlayer.Name == "ADCZ4xx"
 or game.Players.LocalPlayer.Name == "hjcjb96" or game.Players.LocalPlayer.Name == "TM5418888" or game.Players.LocalPlayer.Name == "codm656558" then
-    game.Players.LocalPlayer:Kick("臭傻逼配玩吗?😂")
+    game.Players.LocalPlayer:Kick("Exploiting😂")
 else
 
 OrionLib:MakeNotification({
@@ -124,11 +124,11 @@ local function TLQOYN_fake_script()
     local script = Instance.new("LocalScript", ImageButton)
 
     local MobileCameraFramework = {}
-    local players = game:GetService("Players")
+    local Players = game.Players
     local runservice = game:GetService("RunService")
     local CAS = game:GetService("ContextActionService")
-    local player = players.LocalPlayer
-    local character = player.Character or player.CharacterAdded:Wait()
+    local Player = Players.LocalPlayer
+    local character = Player.Character or Player.CharacterAdded:Wait()
     local root = character:WaitForChild("HumanoidRootPart")
     local humanoid = character.Humanoid
     local camera = workspace.CurrentCamera
@@ -147,16 +147,16 @@ local function TLQOYN_fake_script()
     local DISABLED_OFFSET = CFrame.new(-1.7, 0, 0)
 local rootPos = Vector3.new(0,0,0)
 local function UpdatePos()
-if player.Character and player.Character:FindFirstChildOfClass"Humanoid" and player.Character:FindFirstChildOfClass"Humanoid".RootPart then
-rootPos = player.Character:FindFirstChildOfClass"Humanoid".RootPart.Position
+if Player.Character and Player.Character:FindFirstChildOfClass"Humanoid" and Player.Character:FindFirstChildOfClass"Humanoid".RootPart then
+rootPos = Player.Character:FindFirstChildOfClass"Humanoid".RootPart.Position
 end
 end
     local function UpdateImage(STATE)
         button.Image = states[STATE]
     end
     local function UpdateAutoRotate(BOOL)
-if player.Character and player.Character:FindFirstChildOfClass"Humanoid" then
-player.Character:FindFirstChildOfClass"Humanoid".AutoRotate = BOOL
+if Player.Character and Player.Character:FindFirstChildOfClass"Humanoid" then
+Player.Character:FindFirstChildOfClass"Humanoid".AutoRotate = BOOL
 end
 end
     local function GetUpdatedCameraCFrame()
@@ -168,8 +168,8 @@ end
 UpdatePos()
         UpdateAutoRotate(false)
         UpdateImage("ON")
-if player.Character and player.Character:FindFirstChildOfClass"Humanoid" and player.Character:FindFirstChildOfClass"Humanoid".RootPart then
-player.Character:FindFirstChildOfClass"Humanoid".RootPart.CFrame = GetUpdatedCameraCFrame()
+if Player.Character and Player.Character:FindFirstChildOfClass"Humanoid" and Player.Character:FindFirstChildOfClass"Humanoid".RootPart then
+Player.Character:FindFirstChildOfClass"Humanoid".RootPart.CFrame = GetUpdatedCameraCFrame()
 end
 if game:GetService"Workspace".CurrentCamera then
 game:GetService"Workspace".CurrentCamera.CFrame = camera.CFrame * ENABLED_OFFSET
@@ -216,7 +216,7 @@ coroutine.wrap(TLQOYN_fake_script)()
 local function OMQRQRC_fake_script()
     local script = Instance.new("LocalScript", ShiftlockStarterGui)
 
-    local Players = game:GetService("Players")
+    local Players = game.Players
     local UserInputService = game:GetService("UserInputService")
     local Settings = UserSettings()
     local GameSettings = Settings.GameSettings
@@ -409,7 +409,7 @@ Tab:AddButton({
 local fov = 50
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -443,18 +443,18 @@ end
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -478,7 +478,7 @@ Tab:AddButton({
 local fov = 100
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -512,18 +512,18 @@ end
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -550,7 +550,7 @@ local crosshairDistance = 5
 
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -675,18 +675,18 @@ UserInputService.InputBegan:Connect(onKeyDown)
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -888,8 +888,8 @@ Blue.Text = ""
 Blue.TextColor3 = Color3.fromRGB(0, 0, 0)
 Blue.TextSize = 14.000
 game:GetService("RunService").RenderStepped:connect(function()
- for i,v in next, game:GetService("Players"):GetPlayers() do
-  if v.Name ~= game:GetService("Players").LocalPlayer.Name then
+ for i,v in next, game.Players:GetPlayers() do
+  if v.Name ~= game.Players.LocalPlayer.Name then
    v.Character.HumanoidRootPart.Size = Vector3.new(HitBox.Text,HitBox.Text,HitBox.Text)
    v.Character.HumanoidRootPart.Transparency = 0.8
    v.Character.HumanoidRootPart.Color = Color3.new(Red.Text,Green.Text,Blue.Text)
@@ -1233,7 +1233,7 @@ mini2.Visible = false
 
 speeds = 1
 
-local speaker = game:GetService("Players").LocalPlayer
+local speaker = game.Players.LocalPlayer
 
 local chr = game.Players.LocalPlayer.Character
 local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
@@ -1319,7 +1319,7 @@ onof.MouseButton1Down:connect(function()
 
 
 
-    if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
 
 
 
@@ -1343,7 +1343,7 @@ onof.MouseButton1Down:connect(function()
         if nowe == true then
             Player.Character.Humanoid.PlatformStand = true
         end
-        while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
+        while nowe == true or game.Players.LocalPlayer.Character.Humanoid.Health == 0 do
             game:GetService("RunService").RenderStepped:Wait()
 
             if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
@@ -1400,7 +1400,7 @@ onof.MouseButton1Down:connect(function()
         if nowe == true then
             Player.Character.Humanoid.PlatformStand = true
         end
-        while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do
+        while nowe == true or game.Players.LocalPlayer.Character.Humanoid.Health == 0 do
             wait()
 
             if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
@@ -1481,7 +1481,7 @@ down.MouseLeave:connect(function()
 end)
 
 
-game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
     wait(0.7)
     game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
     game.Players.LocalPlayer.Character.Animate.Disabled = false
@@ -1977,7 +1977,7 @@ Tab:AddButton({
 local fov = 50
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -2011,18 +2011,18 @@ end
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -2046,7 +2046,7 @@ Tab:AddButton({
 local fov = 100
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -2080,18 +2080,18 @@ end
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -2118,7 +2118,7 @@ local crosshairDistance = 5
 
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local Players = game:GetService("Players")
+local Players = game.Players
 local Cam = game.Workspace.CurrentCamera
 
 local FOVring = Drawing.new("Circle")
@@ -2243,18 +2243,18 @@ UserInputService.InputBegan:Connect(onKeyDown)
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 2
+    local PlayerMousePos = Cam.ViewportSize / 2
 
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Players.LocalPlayer then
-            local part = player.Character and player.Character:FindFirstChild(trg_part)
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= Players.LocalPlayer then
+            local part = Player.Character and Player.Character:FindFirstChild(trg_part)
             if part then
                 local ePos, isVisible = Cam:WorldToViewportPoint(part.Position)
-                local distance = (Vector2.new(ePos.x, ePos.y) - playerMousePos).Magnitude
+                local distance = (Vector2.new(ePos.x, ePos.y) - PlayerMousePos).Magnitude
 
                 if distance < last and isVisible and distance < fov then
                     last = distance
-                    nearest = player
+                    nearest = Player
                 end
             end
         end
@@ -2456,8 +2456,8 @@ Blue.Text = ""
 Blue.TextColor3 = Color3.fromRGB(0, 0, 0)
 Blue.TextSize = 14.000
 game:GetService("RunService").RenderStepped:connect(function()
- for i,v in next, game:GetService("Players"):GetPlayers() do
-  if v.Name ~= game:GetService("Players").LocalPlayer.Name then
+ for i,v in next, game.Players:GetPlayers() do
+  if v.Name ~= game.Players.LocalPlayer.Name then
    v.Character.HumanoidRootPart.Size = Vector3.new(HitBox.Text,HitBox.Text,HitBox.Text)
    v.Character.HumanoidRootPart.Transparency = 0.8
    v.Character.HumanoidRootPart.Color = Color3.new(Red.Text,Green.Text,Blue.Text)
@@ -2492,7 +2492,7 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 })
 
-local Player = game:GetService("Players").LocalPlayer
+local Player = game.Players.LocalPlayer
 local char
 local connect
 connect = Player.CharacterAdded:Connect(function(c)
